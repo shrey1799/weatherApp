@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(183, 202, 209);
+    font-family: sans-serif;
+}
+
+#weatherapp-containeer {
+  width: 70vw;
+  max-width: 400px;
+  height: 70vh;
+  min-height: 500px;
+  margin: 70px auto;
+  border-radius: 79px;
+  background: linear-gradient(145deg, #4da7db, #5bc6ff);
+  box-shadow: 10px 10px 37px #418ebb, -10px -10px 37px #69e4ff;
+}
+
+#location,
+#IconAndDesc,
+#temp {
+  width: 100%;
+  height: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(226, 230, 231);
+}
+
+#Desc {
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+img {
+  width: 100px;
+}
+#location {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+#temp span:nth-child(1) {
+  font-size: 2.5rem;
+}
+
+#temp span:nth-child(2) {
+  font-size: 1.5rem;
+}
