@@ -10,10 +10,10 @@ function getUserPosition() {
     navigator.geolocation.getCurrentPosition((position) => {
       latt = position.coords.latitude;
       long = position.coords.longitude;
-      console.log(latt, long);
 
-      const api = `http://api.openweathermap.org/data/2.5/find?lat=${latt}&lon=${long}&cnt=10&appid=674bc8f22a7a9d9fbc5ff7f43e620b91`;
-      console.log(api);
+      const proxy = "https://cors-anywhere.herokuapp.com/";
+      const api = `${proxy}http://api.openweathermap.org/data/2.5/find?lat=${latt}&lon=${long}&cnt=10&appid=674bc8f22a7a9d9fbc5ff7f43e620b91`;
+      
       fetch(api)
         .then((response) => {
           return response.json();
@@ -27,7 +27,7 @@ function getUserPosition() {
           console.log(data.cod);
           let code = data.cod;
           if (code < 300) {
-            icon.src = "images/storm.svg";  
+            icon.src = "images/storm.svg";
           } else if (code >= 300 && code < 500) {
             icon.src = "images/drizzle.svg";
           } else if (code >= 500 && code < 600) {

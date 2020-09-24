@@ -1,9 +1,10 @@
 body {
-    background-color: rgb(183, 202, 209);
-    font-family: sans-serif;
+  background-color: rgb(183, 202, 209);
+  font-family: sans-serif;
 }
 
 #weatherapp-containeer {
+  text-align: center;
   width: 70vw;
   max-width: 400px;
   height: 70vh;
